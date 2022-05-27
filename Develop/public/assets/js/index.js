@@ -39,7 +39,7 @@ const saveNote = (note) =>
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(note),
+    body: JSON.stringify(note)
   });
 
 const deleteNote = (id) =>
@@ -47,8 +47,8 @@ const deleteNote = (id) =>
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-    },
-  });
+    }
+});
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -74,7 +74,8 @@ const handleNoteSave = () => {
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
-  });
+  })
+  
 };
 
 // Delete the clicked note
@@ -93,6 +94,7 @@ const handleNoteDelete = (e) => {
     getAndRenderNotes();
     renderActiveNote();
   });
+  
 };
 
 // Sets the activeNote and displays it
